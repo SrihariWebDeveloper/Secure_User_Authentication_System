@@ -46,7 +46,7 @@ const Login = () => {
   }
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-100 to-pink-300'>
-      <img src={assets.logo} className='p-8' alt="" />
+      <img src={assets.logo} className='p-8' alt="" onClick={()=>navigate('/')} />
       <form onSubmit={onSubmitHandler} className="flex flex-col justify-center items-center mt-18 w-auto">
         <div className="bg-slate-800 rounded-md shadow-2xl">
           <div className="mx-18 my-6 text-center">

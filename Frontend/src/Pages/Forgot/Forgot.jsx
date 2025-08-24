@@ -93,7 +93,7 @@ const Forgot = () => {
       {/* email */}
       {!sentEmail && (
         <div className="min-h-screen bg-gradient-to-br from-blue-100 to-pink-300">
-          <img src={assets.logo} className="p-8" alt="" />
+          <img src={assets.logo} className="p-8" alt="" onClick={()=>navigate('/')} />
           <form
             onSubmit={onSubmitHandler}
             className="flex flex-col justify-center items-center mt-18 w-auto"
@@ -141,7 +141,7 @@ const Forgot = () => {
       {/* otp */}
       {!sentOtp && sentEmail && (
         <div className="min-h-screen bg-gradient-to-br from-blue-100 to-pink-300">
-          <img src={assets.logo} className="p-8" alt="" />
+          <img src={assets.logo} className="p-8" alt="" onClick={()=>navigate('/')} />
           <form
             onSubmit={verifyOtp}
             className="flex flex-col justify-center items-center mt-18 w-auto"
@@ -193,7 +193,7 @@ const Forgot = () => {
       {/* password */}
       {sentOtp && sentEmail && (
         <div className="min-h-screen bg-gradient-to-br from-blue-100 to-pink-300">
-          <img src={assets.logo} className="p-8" alt="" />
+          <img src={assets.logo} className="p-8" alt="" onClick={()=>navigate('/')} />
           <form
             onSubmit={allSubmitHandler}
             className="flex flex-col justify-center items-center mt-18 w-auto"
