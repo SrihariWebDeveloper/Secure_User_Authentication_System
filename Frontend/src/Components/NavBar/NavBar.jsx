@@ -10,7 +10,7 @@ const NavBar = () => {
 
   const logout = async()=>{
     try {
-      const {data} = await axios.post("http://localhost:3000/api/auth/logout");
+      const {data} = await axios.post("https://secure-user-authentication-system-insn.onrender.com/api/auth/logout");
 
       if(data.success){
         toast.success(data.message);
@@ -26,7 +26,7 @@ const NavBar = () => {
 
   const VerifyEmail = async()=>{
     try {
-      const {data}= await axios.post("http://localhost:3000/api/auth/verify-user");
+      const {data}= await axios.post("https://secure-user-authentication-system-insn.onrender.com/api/auth/verify-user");
 
       if(data.success){
         toast.success(data.message);

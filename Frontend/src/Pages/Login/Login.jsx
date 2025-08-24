@@ -21,7 +21,7 @@ const Login = () => {
       axios.defaults.withCredentials = true;
 
       if(state==="Sign Up"){
-        const {data} = await axios.post('http://localhost:3000/api/auth/register',{name,email,password})
+        const {data} = await axios.post('https://secure-user-authentication-system-insn.onrender.com/api/auth/register',{name,email,password})
         if(data.success){
           setIsLogind(true);
           getUserInfo();
@@ -30,10 +30,10 @@ const Login = () => {
           toast.error(data.message);
         }
       }else{
-        const {data} = await axios.post('http://localhost:3000/api/auth/login',{email,password})
+        const {data} = await axios.post('https://secure-user-authentication-system-insn.onrender.com/api/auth/login',{email,password})
         if(data.success){
-          getUserInfo();
           setIsLogind(true);
+          getUserInfo();
           navigate('/');
         }else{
           toast.error(data.message);
