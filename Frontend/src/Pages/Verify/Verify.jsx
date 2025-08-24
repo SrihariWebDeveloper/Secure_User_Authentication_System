@@ -41,7 +41,7 @@ const Verify = () => {
       const otp = otpArray.join("");
       axios.defaults.withCredentials = true;
       const { data } = await axios.post(
-        "http://localhost:3000/api/auth/verify-user-otp",
+        "https://secure-user-authentication-system-insn.onrender.com/auth/verify-user-otp",
         { otp }
       );
 
