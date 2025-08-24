@@ -10,7 +10,7 @@ const app = express();
 const Port = process.env.PORT || 3000;
 coonectDb();
 
-const allowedOrgins = ['http://localhost:5173'];
+const allowedOrgins = ['https://secure-user-authentication-system-client.onrender.com'];
 
 app.use(express.json());
 app.use(cookieParser());
