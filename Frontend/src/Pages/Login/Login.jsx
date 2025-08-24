@@ -32,8 +32,8 @@ const Login = () => {
       }else{
         const {data} = await axios.post('https://secure-user-authentication-system-insn.onrender.com/api/auth/login',{email,password})
         if(data.success){
-          getUserInfo();
           setIsLogind(true);
+          getUserInfo();
           navigate('/');
         }else{
           toast.error(data.message);
