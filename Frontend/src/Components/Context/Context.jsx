@@ -12,7 +12,7 @@ const UserContextProvider = (props) => {
 
   const getUserInfo = async () => {
     try {
-        const {data} = await axios.get('http://localhost:3000/api/user/data');
+        const {data} = await axios.get('https://secure-user-authentication-system-insn.onrender.com/api/user/data');
         if(data.success){
             setUserData(data.userData);
         }else{
@@ -26,7 +26,7 @@ const UserContextProvider = (props) => {
   const userAuth = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/auth/auth-verify"
+        "https://secure-user-authentication-system-insn.onrender.com/api/auth/auth-verify"
       );
       if (data.success) {
         setIsLogind(true);
