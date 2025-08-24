@@ -45,7 +45,7 @@ const Forgot = () => {
     try {
       e.preventDefault();
       const { data } = await axios.post(
-        "http://localhost:3000/api/auth/reset-verify",
+        "https://secure-user-authentication-system-insn.onrender.com/api/auth/reset-verify",
         { email }
       );
 
@@ -73,7 +73,7 @@ const Forgot = () => {
     try {
       e.preventDefault();
       const { data } = await axios.post(
-        "http://localhost:3000/api/auth/reset-otp",
+        "https://secure-user-authentication-system-insn.onrender.com/api/auth/reset-otp",
         { email, otp, password }
       );
 
